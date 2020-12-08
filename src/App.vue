@@ -2,7 +2,7 @@
   <div id="app">
     <h1>User Card</h1>
     <div class="center">
-      <UserCard :user="user" />
+      <UserCard :user="user" @click="alertOne" @contact="alertTwo"/>
     </div>
   </div>
 </template>
@@ -28,5 +28,13 @@
     components: {
       UserCard,
     },
+    methods: {
+      alertOne(){
+        alert('alert number one')
+      },
+      alertTwo(){
+        alert('alert number Twooo')
+      },
+    }
   };
 </script>
