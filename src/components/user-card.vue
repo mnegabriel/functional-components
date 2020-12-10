@@ -9,8 +9,10 @@
         <div class="more-info">
           <h1>{{ props.user.name }}</h1>
           <h3>{{ props.user.role }}</h3>
-          <p>{{ props.user.bio }}</p>
-          <p>{{Object.keys(listeners)}}</p>
+          <p>
+            <slot name='body' />
+          </p>
+          <!-- <p>{{Object.keys(listeners)}}</p> -->
         </div>
       </div>
 </template>

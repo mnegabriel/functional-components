@@ -2,7 +2,13 @@
   <div id="app">
     <h1>User Card</h1>
     <div class="center">
-      <UserCard :user="user" @click="alertOne" @contact="alertTwo"/>
+      <UserCard :user="user" @click="alertOne" @contact="alertTwo">
+        <template #body>
+          <strong>
+                  {{user.bio}}
+          </strong>
+        </template>
+      </UserCard>
     </div>
   </div>
 </template>
